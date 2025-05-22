@@ -1,0 +1,13 @@
+
+[
+  {
+    "imagen": "images/gallery/masonry-1.jpg",
+    "titulo": "Julio y su hijo",
+    "descripcion": "Día especial en la laguna"
+  },
+  {
+    "imagen": "images/gallery/masonry-2.jpg",
+    "titulo": "En familia",
+    "descripcion": "Celebrando juntos una ocasión especial"
+  }
+]
