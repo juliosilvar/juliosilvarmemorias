@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
-
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -78,14 +76,7 @@
       </header>
       <!-- Overlapping Screen-->
       <section class="section section-overlap bg-decorate">
-        <div id="portada-galeria">
-  <a href="images/screens-1-1046x720.jpg">
-    <button class="button button-lg button-primary button-winona wow slideInUp" data-wow-delay=".3s">
-      Ver Portada
-    </button>
-  </a>
-</div>
-
+        <div id="portada" class="section-overlap-image" style="background-image: url(images/screens-1-1046x720.jpg); transition: transform 0.5s ease;"></div>
         <div class="section-overlap-content">
           <div class="container">
             <div class="row">
@@ -102,10 +93,7 @@
                   <h4 class="font-weight-light wow slideInUp" data-wow-delay=".2s">🕊️Ago 19, 1944 - Nov 04, 2024🕊️
                   "Mi amor sigue en la tierra, latiendo en ustedes."</h4>
                 </div>
-                <div class="wow-outer button-outer"><a href="images/screens-1-1046x720.jpg" class="button button-lg button-primary button-winona wow slideInUp" data-wow-delay=".3s" id="ver-portada">
-  Ver Portada
-</a>
-</div>
+                <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInUp" href="#" data-wow-delay=".3s">Ver Portada</a></div>
               </div>
             </div>
           </div>
@@ -968,12 +956,5 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
-<script>
-  lightGallery(document.getElementById("ver-portada").parentElement, {
-    selector: 'a'
-  });
-</script>
-
   </body>
 </html>
