@@ -93,7 +93,10 @@
                   <h4 class="font-weight-light wow slideInUp" data-wow-delay=".2s">🕊️Ago 19, 1944 - Nov 04, 2024🕊️
                   "Mi amor sigue en la tierra, latiendo en ustedes."</h4>
                 </div>
-                <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInUp" href="#" data-wow-delay=".3s">Ver Portada</a></div>
+                <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInUp"
+   href="#" data-wow-delay=".3s"
+   onclick="openLightbox(); return false;">Ver Portada</a>
+</div>
               </div>
             </div>
           </div>
@@ -110,14 +113,14 @@
               <div class="isotope offset-top-2" data-isotope-layout="masonry" data-lightgallery="group" data-lg-thumbnail="false">
                 <div class="row row-30">
                   <div class="col-12 col-sm-6 col-lg-4 isotope-item wow-outer">
-                    <!-- Thumbnail Corporate-->
-                      <article class="thumbnail-corporate wow slideInDown"><img class="thumbnail-corporate-image" src="images/gallery-masonry-1-370x256.jpg" alt="" width="370" height="256"/>
-                         <div class="thumbnail-corporate-caption">
-                           <p class="thumbnail-corporate-title"><a href="#">Julio Silva e Hijo</a></p>
-                             <p>En la Laguna de los Milagros &amp; Disfrutando el paisaje en un día proximo especial recuerdos del alma</p><a class="thumbnail-corporate-link" href="images/gallery-original-1.jpg" data-lightgallery="item"><span class="icon mdi mdi-magnify"></span><span class="icon mdi mdi-magnify"></span></a>
-                                    </div>
-                                    <div class="thumbnail-corporate-dummy"></div>
-                                  </article>
+         <!-- Thumbnail Corporate-->
+         <article class="thumbnail-corporate wow slideInDown"><img class="thumbnail-corporate-image" src="images/gallery-masonry-1-370x256.jpg" alt="" width="370" height="256"/>
+       <div class="thumbnail-corporate-caption">
+         <p class="thumbnail-corporate-title"><a href="#">Julio Silva e Hijo</a></p>
+       <p>En la Laguna de los Milagros &amp; Disfrutando el paisaje en un día proximo especial recuerdos del alma</p><a class="thumbnail-corporate-link" href="images/gallery-original-1.jpg" data-lightgallery="item"><span class="icon mdi mdi-magnify"></span><span class="icon mdi mdi-magnify"></span></a>
+                </div>
+          <div class="thumbnail-corporate-dummy"></div>
+                         </article>
                   </div>
                   <div class="col-12 col-sm-6 col-lg-4 isotope-item wow-outer">
                                   <!-- Thumbnail Corporate-->
@@ -956,5 +959,30 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <!-- Lightbox oculto al inicio -->
+<div id="lightbox" style="visibility:hidden; opacity:0; position:fixed; top:0; left:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.8); display:flex; align-items:center; justify-content:center; z-index:1000; transition: opacity 0.3s ease;">
+  <!-- Botón de cerrar -->
+  <span onclick="closeLightbox()" style="position:absolute; top:20px; right:30px; font-size:40px; color:#fff; cursor:pointer;">&times;</span>
+  <!-- Imagen en grande -->
+  <img src="images/screens-1-1046x720.jpg" alt="Portada en grande" style="max-width:90%; max-height:90%; border-radius:12px; box-shadow: 0 0 20px rgba(255,255,255,0.3);">
+</div>
+
+<!-- Script para mostrar y ocultar -->
+<script>
+  function openLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.visibility = 'visible';
+    lightbox.style.opacity = '1';
+  }
+
+  function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.opacity = '0';
+    setTimeout(() => {
+      lightbox.style.visibility = 'hidden';
+    }, 300); // espera la transición
+  }
+</script>
+
   </body>
 </html>
