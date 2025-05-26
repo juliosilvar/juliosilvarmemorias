@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
-
     <title>Inicio</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
@@ -95,10 +93,7 @@
                   <h4 class="font-weight-light wow slideInUp" data-wow-delay=".2s">🕊️Ago 19, 1944 - Nov 04, 2024🕊️
                   "Mi amor sigue en la tierra, latiendo en ustedes."</h4>
                 </div>
-                <div class="wow-outer button-outer"><a href="images/screens-1-1046x720.jpg" id="ver-portada-btn" class="button button-lg button-primary button-winona wow slideInUp" data-wow-delay=".3s">
-  Ver Portada
-</a>
-</div>
+                <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInUp" href="#" data-wow-delay=".3s">Ver Portada</a></div>
               </div>
             </div>
           </div>
@@ -961,34 +956,5 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
-<script>
-  // Creamos un div "ficticio" para contener el botón como si fuera una galería
-  lightGallery(document.createElement('div'), {
-    dynamic: true,
-    dynamicEl: [
-      {
-        src: 'images/screens-1-1046x720.jpg',
-        thumb: 'images/screens-1-1046x720.jpg',
-        subHtml: '<h4>Portada</h4>'
-      }
-    ]
-  });
-
-  document.getElementById("ver-portada-btn").addEventListener("click", function (e) {
-    e.preventDefault();
-    lightGallery(document.getElementById("ver-portada-btn"), {
-      dynamic: true,
-      dynamicEl: [
-        {
-          src: 'images/screens-1-1046x720.jpg',
-          thumb: 'images/screens-1-1046x720.jpg',
-          subHtml: '<h4>Portada</h4>'
-        }
-      ]
-    });
-  });
-</script>
-
   </body>
 </html>
