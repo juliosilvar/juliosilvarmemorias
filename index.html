@@ -958,16 +958,18 @@
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
-    <!-- Lightbox oculto al inicio -->
-<div id="lightbox" style="visibility:hidden; opacity:0; position:fixed; top:0; left:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.8); display:flex; align-items:center; justify-content:center; z-index:1000; transition: opacity 0.3s ease;">
-  <!-- Botón de cerrar -->
+    <script src="js/script.js"></script>  
+<!-- Lightbox oculto al inicio -->
+<div id="lightbox" onclick="closeLightbox(event)" style="visibility:hidden; opacity:0; position:fixed; top:0; left:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.8); display:flex; align-items:center; justify-content:center; z-index:1000; transition: opacity 0.3s ease;">
+  <!-- Botón cerrar -->
   <span onclick="closeLightbox()" style="position:absolute; top:20px; right:30px; font-size:40px; color:#fff; cursor:pointer;">&times;</span>
+  
   <!-- Imagen en grande -->
-  <img src="images/screens-1-1046x720.jpg" alt="Portada en grande" style="max-width:90%; max-height:90%; border-radius:12px; box-shadow: 0 0 20px rgba(255,255,255,0.3);">
+  <img id="lightbox-img" src="images/screens-1-1046x720.jpg" alt="Portada en grande"
+       style="max-width:150%; max-height:150%; border-radius:12px; box-shadow: 0 0 20px rgba(255,255,255,0.3);">
 </div>
 
-<!-- Script para mostrar y ocultar -->
+<!-- Script para abrir/cerrar -->
 <script>
   function openLightbox() {
     const lightbox = document.getElementById('lightbox');
@@ -975,14 +977,18 @@
     lightbox.style.opacity = '1';
   }
 
-  function closeLightbox() {
+  function closeLightbox(event) {
     const lightbox = document.getElementById('lightbox');
-    lightbox.style.opacity = '0';
-    setTimeout(() => {
-      lightbox.style.visibility = 'hidden';
-    }, 300); // espera la transición
+    const img = document.getElementById('lightbox-img');
+
+    // Si se hace clic fuera de la imagen o en la X, se cierra
+    if (!event || event.target === lightbox || event.target.tagName === "SPAN") {
+      lightbox.style.opacity = '0';
+      setTimeout(() => {
+        lightbox.style.visibility = 'hidden';
+      }, 300);
+    }
   }
 </script>
-
   </body>
 </html>
