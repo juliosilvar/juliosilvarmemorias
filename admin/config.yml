@@ -1,25 +1,17 @@
-
 backend:
   name: github
   repo: juliosilvar/juliosilvarmemorias
   branch: main
+  use_graphql: true
 
-media_folder: "images/gallery"
-public_folder: "/images/gallery"
+media_folder: "images"      # Carpeta donde están tus fotos en el repo
+public_folder: "/images"    # Cómo se acceden esas imágenes desde la web
 
 collections:
   - name: "galeria"
-    label: "Galería de Fotos"
-    files:
-      - file: "gallery/fotos.json"
-        label: "Galería"
-        name: "fotos"
-        format: "json"
-        fields:
-          - label: "Fotos"
-            name: "fotos"
-            widget: "list"
-            fields:
-              - { label: "Imagen", name: "imagen", widget: "image" }
-              - { label: "Título", name: "titulo", widget: "string" }
-              - { label: "Descripción", name: "descripcion", widget: "text" }
+    label: "Galería de Imágenes"
+    folder: "images"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Imagen", name: "image", widget: "image" }
