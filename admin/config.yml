@@ -1,11 +1,9 @@
 backend:
-  name: github
-  repo: juliosilvar/juliosilvarmemorias
+  name: git-gateway
   branch: main
-  use_graphql: true
 
-media_folder: "images"      # Carpeta donde están tus fotos en el repo
-public_folder: "/images"    # Cómo se acceden esas imágenes desde la web
+media_folder: "images"
+public_folder: "/images"
 
 collections:
   - name: "galeria"
