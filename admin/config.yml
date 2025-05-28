@@ -2,21 +2,23 @@ backend:
   name: github
   repo: juliosilvar/juliosilvarmemorias
   branch: main
-  base_url: https://juliosilvar.github.io/juliosilvarmemorias
-  auth_endpoint: callback
 
-media_folder: "images"
-public_folder: "/images"
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 media_library:
   name: default
 
 collections:
   - name: "galeria"
-    label: "Galería de Imágenes"
-    folder: "images"
+    label: "Galería"
+    folder: "images/uploads"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Imagen", name: "image", widget: "image" }
+      - label: "Título"
+        name: "title"
+        widget: "string"
+      - label: "Imagen"
+        name: "image"
+        widget: "image"
