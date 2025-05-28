@@ -2,12 +2,14 @@ backend:
   name: git-gateway
   branch: main
 
+local_backend: false
+
 media_folder: "images"
 public_folder: "/images"
 
 collections:
-  - name: "galeria"
-    label: "Galería de Imágenes"
+  - name: "imagenes"
+    label: "Imágenes"
     folder: "images"
     create: true
     slug: "{{slug}}"
