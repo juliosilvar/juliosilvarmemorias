@@ -1,9 +1,15 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: juliosilvar/juliosilvarmemorias
   branch: main
+  auth_type: implicit
+  app_id: Ov23liYHlpbTCsVpQUen
 
 media_folder: "images"
 public_folder: "/images"
+
+media_library:
+  name: default
 
 collections:
   - name: "galeria"
