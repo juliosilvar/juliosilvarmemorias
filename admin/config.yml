@@ -5,8 +5,8 @@ backend:
   base_url: https://juliosilvar.github.io/juliosilvarmemorias
   auth_endpoint: callback
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "images"
+public_folder: "/images"
 
 media_library:
   name: default
@@ -14,7 +14,7 @@ media_library:
 collections:
   - name: "galeria"
     label: "Galería de Imágenes"
-    folder: "images/uploads"
+    folder: "images"
     create: true
     slug: "{{slug}}"
     fields:
