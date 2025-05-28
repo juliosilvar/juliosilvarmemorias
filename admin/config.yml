@@ -1,24 +1,15 @@
 backend:
-  name: github
-  repo: juliosilvar/juliosilvarmemorias
+  name: git-gateway
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
-
-media_library:
-  name: default
+media_folder: "images"
+public_folder: "/images"
 
 collections:
   - name: "galeria"
-    label: "Galería"
-    folder: "images/uploads"
+    label: "Galería de Imágenes"
+    folder: "images"
     create: true
     slug: "{{slug}}"
     fields:
-      - label: "Título"
-        name: "title"
-        widget: "string"
-      - label: "Imagen"
-        name: "image"
-        widget: "image"
+      - { label: "Imagen", name: "image", widget: "image" }
