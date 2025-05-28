@@ -5,11 +5,11 @@ backend:
   base_url: https://juliosilvar.github.io/juliosilvarmemorias
   auth_endpoint: callback
 
-media_folder: "images/uploads" # Carpeta en el repo
-public_folder: "/images/uploads" # Ruta en la web
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 media_library:
-  name: uploadcare
+  name: default
 
 collections:
   - name: "galeria"
