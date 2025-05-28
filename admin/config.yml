@@ -2,8 +2,11 @@ backend:
   name: github
   repo: juliosilvar/juliosilvarmemorias
   branch: main
-  auth_type: implicit
-  app_id: Ov23li1nqWWT4cyFC6Xp
+  auth_scope: repo
+  base_url: https://juliosilvar.github.io/juliosilvarmemorias
+  auth_endpoint: api/auth
+  client_id: Ov23li1nqWWT4cyFC6Xp
+
 
 media_folder: "images"
 public_folder: "/images"
