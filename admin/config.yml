@@ -9,7 +9,7 @@ media_folder: "images"
 public_folder: "/images"
 
 media_library:
-  name: default
+  name: uploadcare
 
 collections:
   - name: "galeria"
