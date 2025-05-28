@@ -6,8 +6,8 @@ backend:
   auth_type: implicit
   app_id: Ov23liYHlpbTCsVpQUen
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "images"
+public_folder: "/images"
 
 media_library:
   name: default
@@ -15,7 +15,7 @@ media_library:
 collections:
   - name: "galeria"
     label: "Galería de Imágenes"
-    folder: "images/uploads"
+    folder: "images"
     create: true
     slug: "{{slug}}"
     fields:
