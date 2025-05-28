@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: juliosilvar/juliosilvarmemorias
+  name: git-gateway
   branch: main
-  base_url: https://decap-oauth.vercel.app
 
 media_folder: "images"
 public_folder: "/images"
@@ -14,5 +12,4 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
       - { label: "Imagen", name: "image", widget: "image" }
