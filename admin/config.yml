@@ -4,3 +4,19 @@ backend:
   branch: main
   base_url: https://juliosilvar.github.io/juliosilvarmemorias
   auth_endpoint: callback
+
+media_folder: "images/uploads" # Carpeta en el repo
+public_folder: "/images/uploads" # Ruta en la web
+
+media_library:
+  name: uploadcare
+
+collections:
+  - name: "galeria"
+    label: "Galería de Imágenes"
+    folder: "images/uploads"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Imagen", name: "image", widget: "image" }
