@@ -1,6 +1,15 @@
 backend:
-  name: github
-  repo: juliosilvar/juliosilvarmemorias
-  branch: main
-  base_url: https://<TUNOMBRE>.vercel.app
-  auth_endpoint: api/auth
+  name: git-gateway
+  branch: main  # o la rama que uses
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "imagenes"
+    label: "Imágenes"
+    folder: "images"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Imagen", name: "image", widget: "image" }
