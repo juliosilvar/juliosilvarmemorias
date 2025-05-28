@@ -6,5 +6,9 @@
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      // Esto soluciona el error de media library
+      CMS.registerMediaLibrary(window.CMSMediaLibrary);
+    </script>
   </body>
 </html>
