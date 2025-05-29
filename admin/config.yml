@@ -1,20 +1,15 @@
 backend:
   name: git-gateway
-  repo: juliosilvar/juliosilvarmemorias
   branch: main
-  auth_scope: repo
-  
-  auth_endpoint: /api/auth
-  
+
 media_folder: "images"
 public_folder: "/images"
 
 collections:
   - name: "galeria"
-    label: "Galería de Imágenes"
+    label: "Galería"
     folder: "images"
     create: true
+    slug: "{{filename}}"
     fields:
-      - label: "Imagen"
-        name: "imagen"
-        widget: "image"
+      - { label: "Imagen", name: "image", widget: "image" }
