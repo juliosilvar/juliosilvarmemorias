@@ -1,12 +1,12 @@
 backend:
-  name: github
+  name: git-gateway
   repo: juliosilvar/juliosilvarmemorias
   branch: main
   auth_endpoint: https://decap-oauth.vercel.app/auth
   app_id: Ov23lijNtXtjHU8X9MyK
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "images"
+public_folder: "/images"
 
 collections:
   - name: "images"
