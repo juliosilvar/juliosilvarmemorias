@@ -11,10 +11,14 @@ public_folder: "/images"
 
 collections:
   - name: "galeria"
-    label: "Galería de Imágenes"
-    folder: "images"
+    label: "Galería de Fotos"
+    folder: "data/galeria"
     create: true
+    slug: "{{slug}}"
+    extension: "yaml"
+    format: "yaml"
     fields:
-      - label: "Imagen"
-        name: "imagen"
-        widget: "image"
+      - { label: "Título", name: "titulo", widget: "string" }
+      - { label: "Descripción", name: "descripcion", widget: "text" }
+      - { label: "Imagen miniatura", name: "miniatura", widget: "image" }
+      - { label: "Imagen original", name: "original", widget: "image" }
