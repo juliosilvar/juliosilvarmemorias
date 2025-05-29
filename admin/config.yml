@@ -2,19 +2,19 @@ backend:
   name: github
   repo: juliosilvar/juliosilvarmemorias
   branch: main
-  auth_scope: repo
-  base_url: https://decap-oauth.vercel.app
-  auth_endpoint: /api/auth
-  client_id: Ov23lijNtXtjHU8X9MyK
-media_folder: "images"
-public_folder: "/images"
+  auth_endpoint: https://decap-oauth.vercel.app/auth
+  app_id: Ov23lijNtXtjHU8X9MyK
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-  - name: "galeria"
-    label: "Galería de Imágenes"
+  - name: "images"
+    label: "Imágenes"
     folder: "images"
     create: true
+    slug: "{{slug}}"
+    media_folder: ""
+    public_folder: ""
     fields:
-      - label: "Imagen"
-        name: "imagen"
-        widget: "image"
+      - { label: "Imagen", name: "image", widget: "image" }
