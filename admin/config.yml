@@ -1,18 +1,20 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: juliosilvar/juliosilvarmemorias
   branch: main
-
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+  auth_scope: repo
+  base_url: https://decap-oauth.vercel.app
+  auth_endpoint: /api/auth
+  client_id: Ov23lijNtXtjHU8X9MyK
+media_folder: "images"
+public_folder: "/images"
 
 collections:
-  - name: "memorias"
-    label: "Memorias"
-    folder: "content/memorias"
+  - name: "galeria"
+    label: "Galería de Imágenes"
+    folder: "images"
     create: true
-    slug: "{{slug}}"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descripción", name: "description", widget: "text" }
-      - { label: "Imagen", name: "image", widget: "image" }
-      - { label: "Video URL", name: "video_url", widget: "string" }
+      - label: "Imagen"
+        name: "imagen"
+        widget: "image"
