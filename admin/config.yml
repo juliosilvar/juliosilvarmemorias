@@ -3,9 +3,9 @@ backend:
   repo: juliosilvar/juliosilvarmemorias
   branch: main
   auth_scope: repo
-  base_url: https://decap-oauth.vercel.app
+  
   auth_endpoint: /api/auth
-  client_id: Ov23lijNtXtjHU8X9MyK
+  
 media_folder: "images"
 public_folder: "/images"
 
