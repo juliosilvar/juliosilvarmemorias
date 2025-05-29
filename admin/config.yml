@@ -10,6 +10,7 @@ collections:
     label: "Galería de Imágenes"
     folder: "images"
     create: true
-    slug: "{{slug}}"
     fields:
-      - { label: "Imagen", name: "image", widget: "image" }
+      - label: "Imagen"
+        name: "imagen"
+        widget: "image"
