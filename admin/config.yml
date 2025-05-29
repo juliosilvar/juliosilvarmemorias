@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   repo: juliosilvar/juliosilvarmemorias
   branch: main
   site_domain: https://juliosilvaregalado.netlify.app/
