@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   repo: juliosilvar/juliosilvarmemorias
   branch: main
   auth_endpoint: https://decap-oauth.vercel.app/auth
