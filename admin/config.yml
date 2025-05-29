@@ -2,8 +2,10 @@ backend:
   name: github
   repo: juliosilvar/juliosilvarmemorias
   branch: main
-  site_domain: https://juliosilvaregalado.netlify.app/
-
+  auth_scope: repo
+  base_url: https://juliosilvaregalado.netlify.app
+  auth_endpoint: /api/auth
+  client_id: Ov23lijNtXtjHU8X9MyK
 media_folder: "images"
 public_folder: "/images"
 
