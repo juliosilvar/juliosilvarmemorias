@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
+  repo: juliosilvar/juliosilvarmemorias
   branch: main
+  site_domain: https://juliosilvaregalado.netlify.app/
 
 media_folder: "images"
 public_folder: "/images"
